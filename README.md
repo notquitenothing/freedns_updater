@@ -1,5 +1,7 @@
 # FreeDNS Updater
-FreeDNS Updater is a Docker image for keeping FreeDNS from afraid.org up to date with your current IP address.
+FreeDNS Updater is a container app for keeping afraid.org FreeDNS up to date with your current IP address.
+
+The app will update your FreeDNS domains to the public IP address of the server running the container.
 
 Includes example docker-compose.yml
 
