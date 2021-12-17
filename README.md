@@ -9,7 +9,7 @@ Includes example docker-compose.yml
 Before starting, get your randomized update tokens from the [FreeDNS Dynamic Update Interface v2](https://freedns.afraid.org/dynamic/v2/).
 * Go to the update interface, select "Randomized Update Token" from the style types.
 * Choose the domains that you would like to keep dynamically updated by checking the boxes to the left of the domain, and Applying the Enable Dynamic DNS option.
-* Copy the Randomized Update Tokens from the generated urls in the table. The urls will be in the form http://sync.afraid.org/u/{{token}}/
+* Copy the Randomized Update Tokens from the generated urls in the table. The generated tokens will be at the end of the urls, between two forward slashes '/'
 
 To install the container
 * Copy the included example docker-compose.yml file into a directory.
