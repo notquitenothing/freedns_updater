@@ -3,7 +3,7 @@ services:
   freedns_updator:
     container_name: freedns_updater
     image: notquitenothing/freedns_updater:latest
-    restart: unless-stopped
+    restart: on-failure:1
     environment:
       KEYS: "exampleKey1; exampleKey2; ..."
-      HOURS_DELAY: "6"
+      HOURS_DELAY: "12"

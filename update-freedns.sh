@@ -15,5 +15,5 @@ fi
 readarray -d ";" -t keyarr <<< "${KEYS}"
 for key in ${keyarr[@]}
 do
-  echo -n "`date` : " && curl -s "http://sync.afraid.org/u/${key}/"
+  echo -n "`date` : " && curl -s "https://sync.afraid.org/u/${key}/"
 done
