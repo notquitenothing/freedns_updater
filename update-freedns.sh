@@ -1,19 +1,19 @@
 #!/bin/bash
 
-KEY_FILE="/var/local/dns_updater/key"
+TOKEN_FILE="/var/local/dns_updater/key"
 
-if [ -e "$KEY_FILE" ]; then
-    KEYS=`cat $KEY_FILE`
-elif [ ! -z "$KEYS" ]; then
-    echo "Adding keys to key file, first run."
-    echo "$KEYS" > $KEY_FILE
+if [ -e "$TOKEN_FILE" ]; then
+    TOKENS=`cat $TOKEN_FILE`
+elif [ ! -z "$TOKENS" ]; then
+    echo "Adding TOKENS to token file, first run."
+    echo "$TOKENS" > $TOKEN_FILE
 else
-    echo "KEYS must be set on first start."
+    echo "TOKENS must be set on first start."
     exit 1
 fi
 
-readarray -d ";" -t keyarr <<< "${KEYS}"
-for key in ${keyarr[@]}
+readarray -d ";" -t tokenarr <<< "${TOKENS}"
+for token in ${tokenarr[@]}
 do
-  echo -n "`date` : " && curl -s "https://sync.afraid.org/u/${key}/"
+  echo -n "`date` : " && curl -s "https://sync.afraid.org/u/${token}/"
 done
