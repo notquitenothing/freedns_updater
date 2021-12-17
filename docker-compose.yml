@@ -1,0 +1,9 @@
+version: '3.4'
+services:
+  freedns_updator:
+    container_name: freedns_updater
+    image: notquitenothing/freedns_updater:latest
+    restart: unless-stopped
+    environment:
+      KEYS: "exampleKey1; exampleKey2; ..."
+      HOURS_DELAY: "6"
